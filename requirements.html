@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EXERCISE REQUIREMENTS</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
+	<link rel="stylesheet" href="./public/styles.css">
+	<script src="https://unpkg.com/@sjmc11/tourguidejs/dist/tour.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" href="https://unpkg.com/@sjmc11/tourguidejs/dist/css/tour.min.css">
+</head>
+
+<!-- DON'T EDIT THIS FILE, USE THE index.html instead, THIS IS JUST A TOUR -->
+
+<body>
+	<main>
+		<header data-tg-tour="That's All! Remember not to edit this tour file, instead start from the clean index.html included in this repo. Refresh this page to restart the tour." data-tg-order="14" data-tg-title="13. Notes.">
+			<h1 data-tg-tour="Welcome to the exercise, let's look at the steps you need to code to complete this exercise" data-tg-order="1" data-tg-title="Library">
+				Open Library
+			</h1>
+			<section id="cart" id="cart-content">
+				<label for="show-cart" id="cart-icon" data-count="0" data-tg-tour="The count should always show the correct number of items in the cart" data-tg-order="11" data-tg-title="10. Cart Icon"></label>
+				<input type="checkbox" id="show-cart">
+				<div id="cart-content" data-tg-tour="The Cart Starts Empty. With actions disabled" data-tg-order="8" data-tg-title="7. Cart States">
+					<div data-tg-tour="When a book is added, it should show in the cart" data-tg-order="9" data-tg-title="8. Cart States">
+						<h4>Your Cart</h4>
+						<label for="show-cart" id="hide-cart">X</label>
+						<ul class="cart-items">
+							<li>
+								Your Cart is Empty!
+							</li>
+						</ul>
+						<div data-tg-tour="Actions are then enabled" data-tg-order="10" data-tg-title="9. Cart Actions">
+							<button id="request-books" disabled data-tg-tour="Users should be able to request books from the library. This empties the cart." data-tg-order="12" data-tg-title="11. Request Books">Request Books</button>
+							<button class="outline secondary" disabled>Clear Cart</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</header>
+		<form id="search-form" data-tg-tour="Users should be able to search for a book by its title, ISBN or author" data-tg-order="2" data-tg-title="1. Search">
+			<div data-tg-tour="When performing a search the input field and button should enter a loading state. Use the boolean 'aria-busy' attribute to show the loading state" data-tg-order="3" data-tg-title="2. Loading State">
+				<input type="search" id="search" name="search" placeholder="Search Books">
+				<button type="submit">Search</button>
+			</div>
+		</form>
+
+		<section id="results">
+
+
+			<article class="book" data-tg-tour="Results should be shown in a list of books" data-tg-order="4" data-tg-title="3. Results">
+				<div class="cover"><img src="https://covers.openlibrary.org/b/id/491669-M.jpg" alt="Tintin au Tibet"></div>
+				<div class="info">
+					<h3 class="title"><a href="https://openlibrary.org/works/OL151071W">Tintin au Tibet</a></h3>
+					<p class="author">- Hergé</p>
+					<p class="isbn">ISBN: 8426103820</p>
+					<p class="meta">Carlsen Comics, 1960, 62 pages</p>
+					<button>Add to Cart</button>
+				</div>
+			</article>
+
+
+			<article class="book" data-tg-tour="Keep in mind that some results may have missing fields, In this example the cover, author name, no of pages and ISBN was not returned by the API " data-tg-order="5" data-tg-title="4. Missing Info">
+				<div class="cover">
+					<img src="/public/no-image.svg" alt="">
+				</div>
+				<div class="info">
+					<h3 class="title"><a href="https://openlibrary.org/works/OL565224W">Resolution Trust Corporation</a></h3>
+					<p class="author">- Unknown Author</p>
+					<p class="isbn">ISBN: N/A</p>
+					<p class="meta">The Office, 1990</p>
+					<button data-tg-tour="Users should be able to add their books to the cart" data-tg-order="6" data-tg-title="5. Add to Cart">Add to Cart</button>
+				</div>
+			</article>
+
+
+			<article class="book">
+				<div class="cover"><img src="https://covers.openlibrary.org/b/id/10871926-M.jpg" alt="Sea of Rust"></div>
+				<div class="info">
+					<h3 class="title"><a href="https://openlibrary.org/works/OL21622637W">Sea of Rust</a></h3>
+					<p class="author">- C. Robert Cargill</p>
+					<p class="isbn">ISBN: 9781473212794</p>
+					<p class="meta">
+						Orion Publishing Group, Limited, 2017, 365 pages
+					</p>
+					<button disabled data-tg-tour="When a book is added to the cart, this button should be disabled" data-tg-order="7" data-tg-title="6. Button State">Added...</button>
+				</div>
+			</article>
+		</section>
+
+		<dialog id="request-modal">
+			<h3>Your requested has been placed</h3>
+			<ul class="cart-items" data-tg-tour="Books from the cart should show in the request dialog." data-tg-order="13" data-tg-title="12. Final Step.">
+				<li class="item">
+					<div class="cover"><img src="https://covers.openlibrary.org/b/id/10871926-M.jpg" alt="Sea of Rust"></div>
+					<div class="info">
+						<p class="title"><a href="https://openlibrary.org/works/OL21622637W">Sea of Rust</a></p>
+						<p class="author">- C. Robert Cargill</p><button class="remove">Remove</button>
+					</div>
+				</li>
+				<li class="item">
+					<div class="cover"><img src="https://covers.openlibrary.org/b/id/491640-M.jpg" alt="Tintin en Amérique"></div>
+					<div class="info">
+						<p class="title"><a href="https://openlibrary.org/works/OL151089W">Tintin en Amérique</a></p>
+						<p class="author">- Hergé</p><button class="remove">Remove</button>
+					</div>
+				</li>
+				<li class="item">
+					<div class="cover"><img src="https://covers.openlibrary.org/b/id/491669-M.jpg" alt="Tintin au Tibet"></div>
+					<div class="info">
+						<p class="title"><a href="https://openlibrary.org/works/OL151071W">Tintin au Tibet</a></p>
+						<p class="author">- Hergé</p><button class="remove">Remove</button>
+					</div>
+				</li>
+				<li class="item">
+					<div class="cover"><img src="https://covers.openlibrary.org/b/id/755215-M.jpg" alt="Tintin"></div>
+					<div class="info">
+						<p class="title"><a href="https://openlibrary.org/works/OL151101W">Tintin</a></p>
+						<p class="author">- Hergé</p><button class="remove">Remove</button>
+					</div>
+				</li>
+			</ul>
+			<button id="close-request" autofocus>Close</button>
+		</dialog>
+
+		<footer>
+
+		</footer>
+	</main>
+	</div>
+	<script>
+		const tg = new tourguide.TourGuideClient({
+			dialogMaxWidth: 400,
+			backdropColor: "rgba(0,0,0,0.2)",
+		});
+		tg.start();
+		tg.onAfterStepChange(() => {
+			console.info(tg.activeStep, " complete")
+			let input = document.querySelector("#search-form input");
+			let button = document.querySelector("#search-form button");
+
+			let dialog = document.querySelector("dialog#request-modal");
+
+			switch (tg.activeStep) {
+				case 1:
+
+					break;
+
+				case 2:
+
+					input.disabled = true;
+					button.disabled = true;
+					button.setAttribute("aria-busy", "true");
+					button.innerHTML = "Loading...";
+					break;
+
+				case 3:
+					input.disabled = false;
+					button.disabled = false;
+					button.setAttribute("aria-busy", "false");
+					button.innerHTML = "Search";
+					break;
+
+				case 6:
+					document.getElementById('show-cart').checked = true;
+					break;
+
+				case 8:
+					let cart_list = document.querySelector('#cart .cart-items');
+					cart_list.innerHTML = `<li class="item">
+							<div class="cover"><img src="https://covers.openlibrary.org/b/id/10871926-M.jpg" alt="Sea of Rust"></div>
+							<div class="info">
+								<p class="title"><a href="https://openlibrary.org/works/OL21622637W">Sea of Rust</a></p>
+								<p class="author">- C. Robert Cargill</p><button class="remove">Remove</button>
+							</div>
+						</li>`;
+					// increase the count of the cart
+					let label = document.querySelector('#cart-icon');
+					label.setAttribute('data-count', 1);
+					break;
+
+				case 9:
+					let cart_buttons = document.querySelectorAll('#cart button');
+					cart_buttons.forEach((button) => {
+						button.disabled = false;
+					});
+					break;
+
+				case 12:
+					// toggle dialog
+					dialog.showModal();
+					// clone the tg-dialog to inside the dialog
+					let tour = document.querySelector(".tg-dialog");
+					let clone = tour.cloneNode(true);
+					clone.setAttribute("id", "cloned-modal");
+					dialog.appendChild(clone);
+					setTimeout(() => {
+						dialog.close();
+						clone.remove();
+						tg.nextStep();
+					}, 5000)
+					break;
+
+				case 13:
+					// hide modal
+					let cart_list2 = document.querySelector('#cart .cart-items');
+					cart_list2.innerHTML = `<li">Your Cart is Empty</li>`;
+					// increase the count of the cart
+					let label2 = document.querySelector('#cart-icon');
+					label2.setAttribute('data-count', 0);
+					let cart_buttons2 = document.querySelectorAll('#cart button');
+					cart_buttons2.forEach((button) => {
+						button.disabled = true;
+					});
+					break;
+			}
+
+
+
+
+		})
+	</script>
+</body>
+
+</html>

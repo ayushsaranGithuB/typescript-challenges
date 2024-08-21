@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Library</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
+	<link rel="stylesheet" href="./public/styles.css">
+	<script src="./dist/script.js" defer></script>
+</head>
+
+<body>
+	<main>
+		<header>
+			<h1>
+				Open Library
+			</h1>
+			<section id="cart">
+				<label for="show-cart" id="cart-icon" data-count="1">My Cart</label>
+				<input type="checkbox" id="show-cart">
+				<div id="cart-content">
+					<h4>Your Cart</h4>
+					<label for="show-cart" id="hide-cart">X</label>
+					<ul class="cart-items">
+						<li class="item">
+							<div class="cover"><img src="https://covers.openlibrary.org/b/id/10871926-M.jpg" alt="Sea of Rust"></div>
+							<div class="info">
+								<p class="title"><a href="https://openlibrary.org/works/OL21622637W">Sea of Rust</a></p>
+								<p class="author">- C. Robert Cargill</p><button class="remove">Remove</button>
+							</div>
+						</li>
+					</ul>
+					<button id="request-books">Request Books</button>
+					<button class="outline secondary" onclick="clearCart()">Clear Cart</button>
+				</div>
+			</section>
+		</header>
+		<form id="search-form">
+			<input type="search" id="search" name="search" placeholder="Search Books">
+			<button type="submit" aria-busy="false">Search</button>
+		</form>
+
+		<section id="results">
+			<article class="book">
+				<div class="cover">
+					<img src="/public/no-image.svg" alt="">
+				</div>
+				<div class="info">
+					<h3 class="title"><a href="https://openlibrary.org/works/OL565224W">Resolution Trust Corporation</a></h3>
+					<p class="author">- United States. General Accounting Office</p>
+					<p class="isbn">ISBN: N/A</p>
+					<p class="meta">The Office, 1990, 18 pages</p>
+					<button>Add to Cart</button>
+				</div>
+			</article>
+			<article class="book">
+				<div class="cover"><img src="https://covers.openlibrary.org/b/id/491669-M.jpg" alt="Tintin au Tibet"></div>
+				<div class="info">
+					<h3 class="title"><a href="https://openlibrary.org/works/OL151071W">Tintin au Tibet</a></h3>
+					<p class="author">- Hergé</p>
+					<p class="isbn">ISBN: 8426103820</p>
+					<p class="meta">Carlsen Comics, 1960, 62 pages</p>
+					<button>Add to Cart</button>
+				</div>
+			</article>
+			<article class="book">
+				<div class="cover"><img src="https://covers.openlibrary.org/b/id/10871926-M.jpg" alt="Sea of Rust"></div>
+				<div class="info">
+					<h3 class="title"><a href="https://openlibrary.org/works/OL21622637W">Sea of Rust</a></h3>
+					<p class="author">- C. Robert Cargill</p>
+					<p class="isbn">ISBN: 9781473212794</p>
+					<p class="meta">
+						Orion Publishing Group, Limited, 2017, 365 pages
+					</p>
+					<button disabled>Added...</button>
+				</div>
+			</article>
+		</section>
+
+		<dialog id="request-modal">
+			<h3>Your requested has been placed</h3>
+			<ul class="cart-items">
+			</ul>
+			<button id="close-request" autofocus>Close</button>
+		</dialog>
+
+		<footer>
+
+		</footer>
+	</main>
+	</div>
+</body>
+
+</html>
