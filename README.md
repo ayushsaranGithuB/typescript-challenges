@@ -13,7 +13,7 @@ You will practice:
 - DOM Manipulation to add and remove items from the screen
 
 
-[![image.png](https://i.postimg.cc/0yMhKg8P/image.png)]
+![image.png](https://i.postimg.cc/0yMhKg8P/image.png)
 
 ---
 
@@ -72,7 +72,11 @@ Users should be able to search for a book by its title, ISBN or author.
 
 > **Fetch results from the OpenLibrary API available here: **
 >
-> To Search Books: https://openlibrary.org/dev/docs/api/search To Get Cover Images: https://openlibrary.org/dev/docs/api/covers
+> To Search Books: 
+>https://openlibrary.org/dev/docs/api/search 
+> 
+>To Get Cover Images: 
+> https://openlibrary.org/dev/docs/api/covers
 
 ### 2. Loading State
 
